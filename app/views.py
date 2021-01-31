@@ -8,7 +8,7 @@ main = Blueprint('main', __name__)
 def index():
   video_games = VideoGame.query.all()
   print(video_games)
-  return 'Home'
+  return render_template('index.html')
 
 @main.route('/game/<id>')
 def game(id):
