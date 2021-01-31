@@ -50,3 +50,37 @@ body {
 .nav-link a:hover {
   background-color: var(--secondary);
 }
+
+.cards {
+  width: 80vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.card {
+  margin: auto;
+  border: 2px solid var(--third);
+  padding: 5px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+}
+
+.card .delete-btn button {
+  font-size: 1.2rem;
+  background-color: #c24242;
+  padding: 5px;
+  border: none;
+  color: var(--bg);
+  float: right;
+  cursor: pointer;
+}

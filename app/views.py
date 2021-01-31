@@ -7,18 +7,17 @@ main = Blueprint('main', __name__)
 @main.route('/')
 def index():
   video_games = VideoGame.query.all()
-  print(video_games)
-  return render_template('index.html')
+  return render_template('index.html', video_games = video_games)
 
-@main.route('/game/<id>')
-def game(id):
-  id = int(id)
-  video_game = VideoGame.query.get(id)
-  return 'Single Game'
+# @main.route('/game/<id>')
+# def game(id):
+#   id = int(id)
+#   video_game = VideoGame.query.get(id)
+#   return 'Single Game'
 
 @main.route('/add')
 def add():
-  return 'Add game'
+  return render_template('add.html')
 
 @main.route('/create', methods=["POST"])
 def create():

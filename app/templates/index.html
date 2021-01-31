@@ -2,4 +2,15 @@
 
 {% block body %}
   <h1>Home</h1>
+  <div class="cards">
+    {% for game in video_games %}
+      <div class="card">
+        <img src="{{ game.image_url }}" alt="{{game.title}} image">
+        <h3>{{ game.title }}</h3>
+        <form class="delete-btn" action="{{ url_for('main.delete') }}" method="POST">
+          <button value="{{ game.id }}" name="game_id" >Delete Game</button>
+        </form>
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}

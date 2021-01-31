@@ -8,7 +8,6 @@ def create_app():
   app.register_blueprint(main)
   app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DB_URI')
   app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = os.environ.get('TRACK_MODIFICATIONS')
-  print(os.environ.get('DB_URI'))
 
   db.init_app(app)
 
