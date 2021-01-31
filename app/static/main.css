@@ -51,6 +51,10 @@ body {
   background-color: var(--secondary);
 }
 
+.index-title {
+  text-align: center;
+}
+
 .cards {
   width: 80vw;
   margin: auto;
@@ -63,11 +67,12 @@ body {
   border: 2px solid var(--third);
   padding: 5px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+  height: 100%;
 }
 
 .card img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
 }
 
