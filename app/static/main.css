@@ -89,3 +89,56 @@ body {
   float: right;
   cursor: pointer;
 }
+
+.add-title {
+  text-align: center;
+}
+
+.add-form {
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.add-form-span-2 {
+  grid-column: span 2;
+}
+
+.add-form-flex {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.add-form-flex label {
+  font-size: 1.4rem;
+}
+
+.add-form-flex input {
+  outline: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: var(--bg);
+  border-bottom: 2px solid var(--secondary);
+}
+
+.submit-btn {
+  margin: auto;
+}
+
+.submit-btn button {
+  background-color: var(--third);
+  cursor: pointer;
+  padding: 10px 5px;
+  font-size: 1.4rem;
+  border: none;
+}
