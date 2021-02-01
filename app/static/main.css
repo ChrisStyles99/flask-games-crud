@@ -60,10 +60,11 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .card {
-  margin: auto;
+  /* margin: auto; */
   border: 2px solid var(--third);
   padding: 5px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);

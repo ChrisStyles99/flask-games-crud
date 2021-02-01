@@ -2,7 +2,7 @@
 
 {% block body %}
   <div class="add-form">
-    <form method="POST">
+    <form method="POST" action="{{url_for('main.create')}}">
       <h1 class="add-title add-form-span-2">Add new game</h1>
       <div class="add-form-flex">
         <label for="title">Title</label>
