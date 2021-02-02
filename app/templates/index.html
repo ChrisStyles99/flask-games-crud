@@ -1,22 +1,24 @@
 {% extends "layout.html" %}
 
 {% block body %}
+<div class="index">
   <h1 class="index-title">Home</h1>
   <div class="cards">
     {% for game in video_games %}
-      <div class="card">
-        <div class="card-img">
-          <img src="{{ game.image_url }}" alt="{{game.title}} image">
-        </div>
-        <h3>{{ game.title }}</h3>
-        <p>{{game.year}}</p>
-        <div class="card-btns">
-          <a href="{{url_for('main.edit', id=game.id)}}">Edit</a>
-          <form class="delete-btn" action="{{ url_for('main.delete') }}" method="POST">
-            <button value="{{ game.id }}" name="game_id" >Delete Game</button>
-          </form>
-        </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="{{ game.image_url }}" alt="{{game.title}} image">
       </div>
+      <h3>{{ game.title }}</h3>
+      <p>{{game.year}}</p>
+      <div class="card-btns">
+        <a href="{{url_for('main.edit', id=game.id)}}">Edit</a>
+        <form class="delete-btn" action="{{ url_for('main.delete') }}" method="POST">
+          <button value="{{ game.id }}" name="game_id">Delete Game</button>
+        </form>
+      </div>
+    </div>
     {% endfor %}
   </div>
+</div>
 {% endblock %}

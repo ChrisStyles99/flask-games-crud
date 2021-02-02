@@ -13,6 +13,7 @@ body {
   --third: #e23e57;
   --bg: #f6f6f6;
   background-color: var(--bg);
+  overflow: hidden;
 }
 
 .nav {
@@ -51,6 +52,10 @@ body {
   background-color: var(--secondary);
 }
 
+.index {
+  min-height: calc(100vh - 80px);
+}
+
 .index-title {
   text-align: center;
 }
@@ -63,9 +68,22 @@ body {
   gap: 20px;
 }
 
+.cards::after {
+  z-index: -1;
+  content: '';
+  background-color: var(--primary);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: skew(-12deg);
+}
+
 .card {
   /* margin: auto; */
   border: 2px solid var(--third);
+  background-color: var(--bg);
   padding: 5px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
   height: 100%;
@@ -114,6 +132,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.add-form::after {
+  z-index: -1;
+  content: '';
+  background-color: var(--primary);
+  position: absolute;
+  top: 50%;
+  width: 100vw;
+  height: 80%;
+  transform: skewY(12deg);
 }
 
 .add-form form {
@@ -121,6 +151,7 @@ body {
   grid-template-columns: 1fr 1fr;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
   padding: 20px;
+  background-color: var(--bg);
 }
 
 .add-form-span-2 {
