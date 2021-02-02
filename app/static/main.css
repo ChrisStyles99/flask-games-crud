@@ -81,13 +81,27 @@ body {
   font-size: 1.5rem;
 }
 
+.card-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-btns a {
+  text-decoration: none;
+  background-color: var(--secondary);
+  color: var(--bg);
+  font-size: 1.2rem;
+  padding: 0px 10px;
+  border: none;
+}
+
 .card .delete-btn button {
   font-size: 1.2rem;
   background-color: #c24242;
   padding: 5px;
   border: none;
   color: var(--bg);
-  float: right;
   cursor: pointer;
 }
 

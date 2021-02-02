@@ -30,6 +30,27 @@ def create():
   db.session.commit()
   return redirect('/')
 
+@main.route('/edit/<id>')
+def edit(id):
+  id = int(id)
+  video_game = VideoGame.query.get(id)
+  return render_template('edit.html', video_game = video_game)
+
+@main.route('/game-edit/<id>', methods=["POST"])
+def game_edit(id):
+  title = request.form.get('title')
+  year = request.form.get('year')
+  image_url = request.form.get('image_url')
+  year = int(year)
+  id = int(id)
+  game = VideoGame.query.get(id)
+  game.title = title
+  game.year = year
+  game.image_url = image_url
+  db.session.commit()
+  print(title, year, image_url)
+  return redirect('/')
+
 @main.route('/delete', methods=["POST"])
 def delete():
   game_id = request.form.get('game_id')
