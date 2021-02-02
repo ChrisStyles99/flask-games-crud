@@ -52,6 +52,21 @@ body {
   background-color: var(--secondary);
 }
 
+.burger-menu {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.line {
+  height: 3px;
+  width: 100%;
+  background-color: var(--bg);
+}
+
 .index {
   min-height: calc(100vh - 80px);
 }
@@ -68,7 +83,7 @@ body {
   gap: 20px;
 }
 
-.cards::after {
+.index::after {
   z-index: -1;
   content: '';
   background-color: var(--primary);
@@ -187,4 +202,47 @@ body {
   padding: 10px 5px;
   font-size: 1.4rem;
   border: none;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-list {
+    display: block;
+    position: absolute;
+    top: 80px;
+    width: 50vw;
+    height: 100vh;
+    background-color: var(--primary);
+    transform: translateX(-100%);
+    transition: 0.3s ease all;
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    margin: 10px 5px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .add-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .add-form-span-2 {
+    grid-column: span 1;
+  }
 }

@@ -13,9 +13,23 @@
       <li class="nav-link"><a href="{{ url_for('main.index') }}">Home</a></li>
       <li class="nav-link"><a href="{{url_for('main.add')}}">Add new</a></li>
     </ul>
+    <div class="burger-menu">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </div>
   </nav>
 
   {% block body %}
   {% endblock %}
+
+  <script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navList = document.querySelector('.nav-list');
+
+    burgerMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    })
+  </script>
 </body>
 </html>
